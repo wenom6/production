@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ProductCard
+    <ProductList
   name="Українська вишиванка"
     description="Стильна вишиванка з орнаментами."
     price="1500"
@@ -9,10 +9,10 @@
 </template>
 
 <script>
-  import ProductCard from './components/ProductCard.vue';
+  import ProductList from './components/ProductList.vue';
   export default {
     components: {
-      ProductCard,
+      ProductList,
     }
 
 };</script>
