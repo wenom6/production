@@ -1,21 +1,22 @@
 <template>
-<div class="product-list">
-<ProductList
-v-for="product in products"
-:key="product.id"
-:name="product.name"
-:description="product.description"
-:price="product.price"
-:image="product.image"/>
-</div>
-</template>
-
-<script>
-import ProductList from './ProductList.vue';
-
-export default {
+    <div class="product-list">
+      <ProductCard
+        v-for="product in products"
+        :key="product.id"
+        :name="product.name"
+        :description="product.description"
+        :price="product.price"
+        :image="product.image"
+      />
+    </div>
+  </template>
+  
+  <script>
+  import ProductCard from './ProductCard.vue';
+  
+  export default {
 components: {
-ProductList,
+ProductCard,
 },
 data() {
 return {
@@ -64,12 +65,14 @@ image: "https://img.freepik.com/free-photo/futuristic-virtual-reality-headset-il
 };
 },
 };
-</script>
-<style scoped>
-.product-list{
+  </script>
+  
+  <style scoped>
+  .product-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    }
-</style>
+  }
+  </style>
+  
